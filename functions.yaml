@@ -1,0 +1,12 @@
+steps: 
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args:
+      - -c 
+      - |
+        gcloud functions deploy {function名} --runtime {ランタイム} \
+        --entry-point {エントリポイント} \
+        --region asia-northeast1 \
+        --source {ソースコードのあるディレクトリ} \
+        --trigger-resource gs://{トリガーになるバケット} \
+        --trigger-event google.storage.object.finalize 

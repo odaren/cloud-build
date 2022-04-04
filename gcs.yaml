@@ -1,0 +1,7 @@
+steps: 
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args:
+      - -c 
+      - |
+        gsutil cp {ファイル名} gs://{バケット名}

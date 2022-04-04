@@ -1,2 +1,2 @@
 # cloud-build
-GCP各サービスの CI/CD 
+Google Cloud 各サービスの CI/CD パイプライン 
