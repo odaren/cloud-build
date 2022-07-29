@@ -1,0 +1,10 @@
+steps: 
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: "bash"
+    args:
+      - -c 
+      - |
+        gcloud workflows deploy my-workflow \
+        --source={ソースファイル名} \ 
+        --service-account={サービスアカウント名} \
+        --project={プロジェクト名}

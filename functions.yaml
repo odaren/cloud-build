@@ -4,9 +4,10 @@ steps:
     args:
       - -c 
       - |
-        gcloud functions deploy {function名} --runtime {ランタイム} \
-        --entry-point {エントリポイント} \
+        gcloud functions deploy {function名} 
+        --runtime {ランタイム} \
         --region asia-northeast1 \
         --source {ソースコードのあるディレクトリ} \
-        --trigger-resource gs://{トリガーになるバケット} \
-        --trigger-event google.storage.object.finalize 
+        --trigger-http \
+        --project {} \
+        --service-account {}
